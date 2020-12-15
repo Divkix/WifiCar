@@ -1,9 +1,9 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class topnav_mainscreen extends StatelessWidget {
-  topnav_mainscreen({
+class NavigationBar extends StatelessWidget {
+  NavigationBar({
     Key key,
   }) : super(key: key);
   @override
@@ -11,8 +11,8 @@ class topnav_mainscreen extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Pinned.fromSize(
-          bounds: Rect.fromLTWH(0.0, 0.0, 412.w, 110.h),
-          size: Size(412.w, 110.h),
+          bounds: Rect.fromLTWH(0.0, 0.0, 412.w, 84.h),
+          size: Size(412.w, 84.h),
           pinLeft: true,
           pinRight: true,
           pinTop: true,
@@ -22,20 +22,21 @@ class topnav_mainscreen extends StatelessWidget {
           ),
         ),
         Pinned.fromSize(
-          bounds: Rect.fromLTWH(164.0, 55.3, 84.w, 27.h),
-          size: Size(412.w, 110.h),
+          bounds: Rect.fromLTWH(166.0, 42.0, 81.w, 24.h),
+          size: Size(412.w, 84.h),
           fixedWidth: true,
           fixedHeight: true,
           child: Text.rich(
             TextSpan(
               style: TextStyle(
                 fontFamily: 'Montserrat',
-                fontSize: 22.sp,
+                fontSize: 20.sp,
                 color: const Color(0xff000000),
+                height: 1.5.h,
               ),
               children: [
                 TextSpan(
-                  text: 'Wifi',
+                  text: 'WiFI',
                 ),
                 TextSpan(
                   text: 'Car',
