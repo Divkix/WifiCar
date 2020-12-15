@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import './MainScreen.dart';
+import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -141,57 +143,67 @@ class Voice extends StatelessWidget {
                   fixedHeight: true,
                   child:
                       // Adobe XD layer: 'icon' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 0.0, 30.w, 30.h),
-                        size: Size(30.w, 30.h),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
-                          decoration: BoxDecoration(),
-                        ),
-                      ),
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(8.0, 7.3, 14.w, 14.h),
-                        size: Size(30.w, 30.h),
-                        fixedWidth: true,
-                        fixedHeight: true,
-                        child:
-                            // Adobe XD layer: 'Icon feather-arrow-…' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.0, 7.0, 14.w, 1.h),
-                              size: Size(14.w, 14.h),
-                              pinLeft: true,
-                              pinRight: true,
-                              fixedHeight: true,
-                              child: SvgPicture.string(
-                                _svg_12j3ro,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.0, 0.0, 7.w, 14.h),
-                              size: Size(14.w, 14.h),
-                              pinLeft: true,
-                              pinTop: true,
-                              pinBottom: true,
-                              fixedWidth: true,
-                              child: SvgPicture.string(
-                                _svg_2hdfch,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ],
-                        ),
+                      PageLink(
+                    links: [
+                      PageLinkInfo(
+                        transition: LinkTransition.Fade,
+                        ease: Curves.easeOut,
+                        duration: 0.3,
+                        pageBuilder: () => MainScreen(),
                       ),
                     ],
+                    child: Stack(
+                      children: <Widget>[
+                        Pinned.fromSize(
+                          bounds: Rect.fromLTWH(0.0, 0.0, 30.w, 30.h),
+                          size: Size(30.w, 30.h),
+                          pinLeft: true,
+                          pinRight: true,
+                          pinTop: true,
+                          pinBottom: true,
+                          child: Container(
+                            decoration: BoxDecoration(),
+                          ),
+                        ),
+                        Pinned.fromSize(
+                          bounds: Rect.fromLTWH(8.0, 7.3, 14.w, 14.h),
+                          size: Size(30.w, 30.h),
+                          fixedWidth: true,
+                          fixedHeight: true,
+                          child:
+                              // Adobe XD layer: 'Icon feather-arrow-…' (group)
+                              Stack(
+                            children: <Widget>[
+                              Pinned.fromSize(
+                                bounds: Rect.fromLTWH(0.0, 7.0, 14.w, 1.h),
+                                size: Size(14.w, 14.h),
+                                pinLeft: true,
+                                pinRight: true,
+                                fixedHeight: true,
+                                child: SvgPicture.string(
+                                  _svg_12j3ro,
+                                  allowDrawingOutsideViewBox: true,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              Pinned.fromSize(
+                                bounds: Rect.fromLTWH(0.0, 0.0, 7.w, 14.h),
+                                size: Size(14.w, 14.h),
+                                pinLeft: true,
+                                pinTop: true,
+                                pinBottom: true,
+                                fixedWidth: true,
+                                child: SvgPicture.string(
+                                  _svg_2hdfch,
+                                  allowDrawingOutsideViewBox: true,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Pinned.fromSize(
@@ -206,7 +218,7 @@ class Voice extends StatelessWidget {
                       fontSize: 20.sp,
                       color: const Color(0xff000000),
                       fontWeight: FontWeight.w700,
-                      height: 1.2.h,
+                      height: 1.5.h,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -215,7 +227,7 @@ class Voice extends StatelessWidget {
             ),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(26.0, 715.0, 360.w, 90.7.h),
+            bounds: Rect.fromLTWH(26.0, 715.0, 360.0.w, 90.7.h),
             size: Size(412.w, 870.h),
             pinLeft: true,
             pinRight: true,
@@ -227,7 +239,7 @@ class Voice extends StatelessWidget {
               children: <Widget>[
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(81.0, 0.0, 198.w, 29.h),
-                  size: Size(360.w, 90.7.h),
+                  size: Size(360.w, 90.h),
                   pinTop: true,
                   fixedWidth: true,
                   fixedHeight: true,
@@ -243,7 +255,7 @@ class Voice extends StatelessWidget {
                 ),
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(0.0, 90.7, 360.w, 1.h),
-                  size: Size(360.w, 90.7.h),
+                  size: Size(360.w, 90.h),
                   pinLeft: true,
                   pinRight: true,
                   pinBottom: true,
@@ -258,7 +270,7 @@ class Voice extends StatelessWidget {
                 ),
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(7.0, 69.0, 336.w, 18.h),
-                  size: Size(360.w, 90.7.h),
+                  size: Size(360.w, 90.h),
                   pinLeft: true,
                   pinRight: true,
                   pinBottom: true,
@@ -269,7 +281,7 @@ class Voice extends StatelessWidget {
                       fontFamily: 'Montserrat',
                       fontSize: 14.sp,
                       color: const Color(0xb2000000),
-                      height: 2.142857142857143.h,
+                      // height: 2.142857142857143.h,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -380,7 +392,7 @@ class Voice extends StatelessWidget {
                       fontFamily: 'Roboto Mono',
                       fontSize: 14.sp,
                       color: const Color(0xff2699fb),
-                      height: 2.142857142857143.h,
+                      // height: 2.142857142857143.h,
                     ),
                     textAlign: TextAlign.center,
                   ),

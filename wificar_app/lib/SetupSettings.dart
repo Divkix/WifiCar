@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import './MainScreen.dart';
+import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,57 +45,67 @@ class SetupSettings extends StatelessWidget {
                   fixedHeight: true,
                   child:
                       // Adobe XD layer: 'icon' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 0.0, 30.w, 30.h),
-                        size: Size(30.w, 30.h),
-                        pinLeft: true,
-                        pinRight: true,
-                        pinTop: true,
-                        pinBottom: true,
-                        child: Container(
-                          decoration: BoxDecoration(),
-                        ),
-                      ),
-                      Pinned.fromSize(
-                        bounds: Rect.fromLTWH(8.0, 7.3, 14.w, 14.h),
-                        size: Size(30.w, 30.h),
-                        fixedWidth: true,
-                        fixedHeight: true,
-                        child:
-                            // Adobe XD layer: 'Icon feather-arrow-…' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.0, 7.0, 14.w, 1.h),
-                              size: Size(14.w, 14.h),
-                              pinLeft: true,
-                              pinRight: true,
-                              fixedHeight: true,
-                              child: SvgPicture.string(
-                                _svg_12j3ro,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.0, 0.0, 7.w, 14.h),
-                              size: Size(14.w, 14.h),
-                              pinLeft: true,
-                              pinTop: true,
-                              pinBottom: true,
-                              fixedWidth: true,
-                              child: SvgPicture.string(
-                                _svg_2hdfch,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ],
-                        ),
+                      PageLink(
+                    links: [
+                      PageLinkInfo(
+                        transition: LinkTransition.Fade,
+                        ease: Curves.easeOut,
+                        duration: 0.3,
+                        pageBuilder: () => MainScreen(),
                       ),
                     ],
+                    child: Stack(
+                      children: <Widget>[
+                        Pinned.fromSize(
+                          bounds: Rect.fromLTWH(0.0, 0.0, 30.w, 30.h),
+                          size: Size(30.w, 30.h),
+                          pinLeft: true,
+                          pinRight: true,
+                          pinTop: true,
+                          pinBottom: true,
+                          child: Container(
+                            decoration: BoxDecoration(),
+                          ),
+                        ),
+                        Pinned.fromSize(
+                          bounds: Rect.fromLTWH(8.0, 7.3, 14.w, 14.h),
+                          size: Size(30.w, 30.h),
+                          fixedWidth: true,
+                          fixedHeight: true,
+                          child:
+                              // Adobe XD layer: 'Icon feather-arrow-…' (group)
+                              Stack(
+                            children: <Widget>[
+                              Pinned.fromSize(
+                                bounds: Rect.fromLTWH(0.0, 7.0, 14.w, 1.h),
+                                size: Size(14.w, 14.h),
+                                pinLeft: true,
+                                pinRight: true,
+                                fixedHeight: true,
+                                child: SvgPicture.string(
+                                  _svg_12j3ro,
+                                  allowDrawingOutsideViewBox: true,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              Pinned.fromSize(
+                                bounds: Rect.fromLTWH(0.0, 0.0, 7.w, 14.h),
+                                size: Size(14.w, 14.h),
+                                pinLeft: true,
+                                pinTop: true,
+                                pinBottom: true,
+                                fixedWidth: true,
+                                child: SvgPicture.string(
+                                  _svg_2hdfch,
+                                  allowDrawingOutsideViewBox: true,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Pinned.fromSize(
@@ -127,7 +139,7 @@ class SetupSettings extends StatelessWidget {
                 Stack(
               children: <Widget>[
                 Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.0, 0.0, 320.w, 162.4),
+                  bounds: Rect.fromLTWH(0.0, 0.0, 320.0.w, 162.4.h),
                   size: Size(320.w, 247.h),
                   pinLeft: true,
                   pinRight: true,
@@ -138,8 +150,42 @@ class SetupSettings extends StatelessWidget {
                       Stack(
                     children: <Widget>[
                       Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 145.w, 29.h),
+                        size: Size(145.w, 58.h),
+                        pinLeft: true,
+                        pinRight: true,
+                        pinTop: true,
+                        fixedHeight: true,
+                        child: Text(
+                          'Car Status:',
+                          style: TextStyle(
+                            fontFamily: 'Roboto Mono',
+                            fontSize: 22.sp,
+                            color: const Color(0xff000000),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(13.0, 29.0, 119.w, 29.h),
+                        size: Size(145.w, 58.h),
+                        pinLeft: true,
+                        pinRight: true,
+                        pinBottom: true,
+                        fixedHeight: true,
+                        child: Text(
+                          'Setup Car',
+                          style: TextStyle(
+                            fontFamily: 'Roboto Mono',
+                            fontSize: 22.sp,
+                            color: const Color(0x66000000),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromSize(
                         bounds: Rect.fromLTWH(9.0, 0.0, 302.w, 54.h),
-                        size: Size(320.w, 162.4.h),
+                        size: Size(320.w, 162.h),
                         pinLeft: true,
                         pinRight: true,
                         pinTop: true,
@@ -169,8 +215,8 @@ class SetupSettings extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromSize(
-                        bounds: Rect.fromLTWH(0.0, 122.0, 320.w, 40.4.h),
-                        size: Size(320.w, 162.4.h),
+                        bounds: Rect.fromLTWH(0.0, 122.0, 320.0.w, 40.4.h),
+                        size: Size(320.w, 162.h),
                         pinLeft: true,
                         pinRight: true,
                         pinBottom: true,
@@ -180,8 +226,8 @@ class SetupSettings extends StatelessWidget {
                             Stack(
                           children: <Widget>[
                             Pinned.fromSize(
-                              bounds: Rect.fromLTWH(0.4, 40.4, 319.3.w, 1.h),
-                              size: Size(320.w, 40.4.h),
+                              bounds: Rect.fromLTWH(0.4, 40.4, 319.3.w, 1.0.h),
+                              size: Size(320.w, 40.h),
                               pinLeft: true,
                               pinRight: true,
                               pinBottom: true,
@@ -194,7 +240,7 @@ class SetupSettings extends StatelessWidget {
                             ),
                             Pinned.fromSize(
                               bounds: Rect.fromLTWH(0.0, 0.0, 320.w, 40.h),
-                              size: Size(320.w, 40.4.h),
+                              size: Size(320.w, 40.h),
                               pinLeft: true,
                               pinRight: true,
                               pinTop: true,
@@ -208,8 +254,9 @@ class SetupSettings extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromSize(
-                              bounds: Rect.fromLTWH(105.0, 8.0, 110.w, 24.h),
-                              size: Size(320.w, 40.4.h),
+                              bounds:
+                                  Rect.fromLTWH(105.0, 8.0, 110.0.w, 24.0.h),
+                              size: Size(320.w, 40.h),
                               fixedWidth: true,
                               fixedHeight: true,
                               child: Text(
@@ -254,7 +301,7 @@ class SetupSettings extends StatelessWidget {
                             borderRadius: BorderRadius.circular(25.0),
                             color: const Color(0xff26ef2d),
                             border: Border.all(
-                                width: 1.0.w, color: const Color(0xff000000)),
+                                width: 1.w, color: const Color(0xff000000)),
                           ),
                         ),
                       ),
@@ -269,7 +316,6 @@ class SetupSettings extends StatelessWidget {
                             fontFamily: 'Montserrat',
                             fontSize: 20.sp,
                             color: const Color(0xff000000),
-                            height: 1.2.h,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -290,40 +336,40 @@ class SetupSettings extends StatelessWidget {
                 // Adobe XD layer: 'Car Status' (group)
                 Stack(
               children: <Widget>[
-                Pinned.fromSize(
-                  bounds: Rect.fromLTWH(0.0, 0.0, 145.w, 29.h),
-                  size: Size(145.w, 58.h),
-                  pinLeft: true,
-                  pinRight: true,
-                  pinTop: true,
-                  fixedHeight: true,
-                  child: Text(
-                    'Car Status:',
-                    style: TextStyle(
-                      fontFamily: 'Roboto Mono',
-                      fontSize: 22.sp,
-                      color: const Color(0xff000000),
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Pinned.fromSize(
-                  bounds: Rect.fromLTWH(13.0, 29.0, 119.w, 29.h),
-                  size: Size(145.w, 58.h),
-                  pinLeft: true,
-                  pinRight: true,
-                  pinBottom: true,
-                  fixedHeight: true,
-                  child: Text(
-                    'Setup Car',
-                    style: TextStyle(
-                      fontFamily: 'Roboto Mono',
-                      fontSize: 22.sp,
-                      color: const Color(0x66000000),
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
+                // Pinned.fromSize(
+                //   bounds: Rect.fromLTWH(0.0, 0.0, 145.w, 29.h),
+                //   size: Size(145.w, 58.h),
+                //   pinLeft: true,
+                //   pinRight: true,
+                //   pinTop: true,
+                //   fixedHeight: true,
+                //   child: Text(
+                //     'Car Status:',
+                //     style: TextStyle(
+                //       fontFamily: 'Roboto Mono',
+                //       fontSize: 22.sp,
+                //       color: const Color(0xff000000),
+                //     ),
+                //     textAlign: TextAlign.left,
+                //   ),
+                // ),
+                // Pinned.fromSize(
+                //   bounds: Rect.fromLTWH(13.0, 29.0, 119.w, 29.h),
+                //   size: Size(145.w, 58.h),
+                //   pinLeft: true,
+                //   pinRight: true,
+                //   pinBottom: true,
+                //   fixedHeight: true,
+                //   child: Text(
+                //     'Setup Car',
+                //     style: TextStyle(
+                //       fontFamily: 'Roboto Mono',
+                //       fontSize: 22.sp,
+                //       color: const Color(0x66000000),
+                //     ),
+                //     textAlign: TextAlign.left,
+                //   ),
+                // ),
               ],
             ),
           ),
