@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TouchControl extends StatelessWidget {
   TouchControl({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -124,7 +124,7 @@ class TouchControl extends StatelessWidget {
               children: <Widget>[
                 Pinned.fromSize(
                   bounds: Rect.fromLTWH(0.0, 0.0, 412.w, 84.h),
-                  size: Size(412.0, 84.h),
+                  size: Size(412.w, 84.h),
                   pinLeft: true,
                   pinRight: true,
                   pinTop: true,

@@ -4,12 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final double width = 412;
-    final double height = 870;
+    // Set App Dimensions
+    final double width = 412; // Width of App
+    final double height = 870; // Height of App
+    // Set ScreenUtil to auto scale size
     ScreenUtil.init(context,
         designSize: Size(width, height), allowFontScaling: true);
     return Scaffold(

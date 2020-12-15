@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SetupSettings extends StatelessWidget {
   SetupSettings({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -139,7 +139,7 @@ class SetupSettings extends StatelessWidget {
                     children: <Widget>[
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(9.0, 0.0, 302.w, 54.h),
-                        size: Size(320.w, 162.4),
+                        size: Size(320.w, 162.4.h),
                         pinLeft: true,
                         pinRight: true,
                         pinTop: true,
@@ -170,7 +170,7 @@ class SetupSettings extends StatelessWidget {
                       ),
                       Pinned.fromSize(
                         bounds: Rect.fromLTWH(0.0, 122.0, 320.w, 40.4.h),
-                        size: Size(320.0.w, 162.4.h),
+                        size: Size(320.w, 162.4.h),
                         pinLeft: true,
                         pinRight: true,
                         pinBottom: true,

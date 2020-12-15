@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Voice extends StatelessWidget {
   Voice({
-    Key key,
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -378,9 +378,9 @@ class Voice extends StatelessWidget {
                     '6s',
                     style: TextStyle(
                       fontFamily: 'Roboto Mono',
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       color: const Color(0xff2699fb),
-                      height: 2.142857142857143,
+                      height: 2.142857142857143.h,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -409,7 +409,7 @@ class Voice extends StatelessWidget {
                     'Car Status:',
                     style: TextStyle(
                       fontFamily: 'Roboto Mono',
-                      fontSize: 22,
+                      fontSize: 22.sp,
                       color: const Color(0xff000000),
                     ),
                     textAlign: TextAlign.left,
