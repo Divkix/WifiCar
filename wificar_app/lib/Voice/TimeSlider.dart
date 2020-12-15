@@ -3,9 +3,6 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TimeSlider extends StatelessWidget {
-  TimeSlider({
-    Key key,
-  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Stack(

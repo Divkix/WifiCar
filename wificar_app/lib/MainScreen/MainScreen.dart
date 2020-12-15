@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './SimpleButton.dart';
-import './SetupSettings.dart';
+import './SetupBtn.dart';
+import 'package:wificar_nodemcu/Settings/Settings.dart';
 import 'package:adobe_xd/page_link.dart';
-import './ControlOption.dart';
-import './Voice.dart';
-import './Accelerometer.dart';
-import './TouchControl.dart';
-import './NavigationBar.dart';
+import './VoiceOption.dart';
+import 'package:wificar_nodemcu/Voice/Voice.dart';
+import './AccelerometerOption.dart';
+import 'package:wificar_nodemcu/Accelerometer/Accelerometer.dart';
+import './ControllerOption.dart';
+import 'package:wificar_nodemcu/TouchPad/TouchControl.dart';
+import './NavBarMain.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainScreen extends StatelessWidget {
-  MainScreen({
-    Key key,
-  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,
@@ -30,17 +29,17 @@ class MainScreen extends StatelessWidget {
             pinBottom: true,
             fixedHeight: true,
             child:
-                // Adobe XD layer: 'Simple Button' (component)
+                // Adobe XD layer: 'Setup Button' (component)
                 PageLink(
               links: [
                 PageLinkInfo(
                   transition: LinkTransition.Fade,
                   ease: Curves.easeOut,
                   duration: 0.3,
-                  pageBuilder: () => SetupSettings(),
+                  pageBuilder: () => Settings(),
                 ),
               ],
-              child: SimpleButton(),
+              child: SetupBtn(),
             ),
           ),
           Pinned.fromSize(
@@ -71,7 +70,7 @@ class MainScreen extends StatelessWidget {
                         pageBuilder: () => Voice(),
                       ),
                     ],
-                    child: ControlOption(),
+                    child: VoiceOption(),
                   ),
                 ),
                 Pinned.fromSize(
@@ -91,7 +90,7 @@ class MainScreen extends StatelessWidget {
                         pageBuilder: () => Accelerometer(),
                       ),
                     ],
-                    child: ControlOption(),
+                    child: AccelerometerOption(),
                   ),
                 ),
                 Pinned.fromSize(
@@ -102,7 +101,7 @@ class MainScreen extends StatelessWidget {
                   pinTop: true,
                   fixedHeight: true,
                   child:
-                      // Adobe XD layer: 'Control Option' (component)
+                      // Adobe XD layer: 'Controller Option' (component)
                       PageLink(
                     links: [
                       PageLinkInfo(
@@ -112,7 +111,7 @@ class MainScreen extends StatelessWidget {
                         pageBuilder: () => TouchControl(),
                       ),
                     ],
-                    child: ControlOption(),
+                    child: ControllerOption(),
                   ),
                 ),
               ],
@@ -127,7 +126,7 @@ class MainScreen extends StatelessWidget {
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Navigation Bar' (component)
-                NavigationBar(),
+                NavBarMain(),
           ),
         ],
       ),

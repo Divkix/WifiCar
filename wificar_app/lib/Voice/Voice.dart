@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './CarStatus.dart';
-import './NavigationBar.dart';
-import './ControlArrow.dart';
+import './CommandSpoken.dart';
+import './CarStatusVoice.dart';
+import './NavBarVoice.dart';
+import './TimeSlider.dart';
+import './VoiceControl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Accelerometer extends StatelessWidget {
-  Accelerometer({
-    Key key,
-  }) : super(key: key);
+class Voice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,13 +15,24 @@ class Accelerometer extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromSize(
+            bounds: Rect.fromLTWH(36.0, 715.0, 336.w, 87.h),
+            size: Size(412.w, 870.h),
+            pinLeft: true,
+            pinRight: true,
+            pinBottom: true,
+            fixedHeight: true,
+            child:
+                // Adobe XD layer: 'CommandSpoken' (component)
+                CommandSpoken(),
+          ),
+          Pinned.fromSize(
             bounds: Rect.fromLTWH(134.0, 145.0, 145.w, 58.h),
             size: Size(412.w, 870.h),
             fixedWidth: true,
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Car Status' (component)
-                CarStatus(),
+                CarStatusVoice(),
           ),
           Pinned.fromSize(
             bounds: Rect.fromLTWH(0.0, 0.0, 412.w, 84.h),
@@ -33,17 +43,27 @@ class Accelerometer extends StatelessWidget {
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Navigation Bar' (component)
-                NavigationBar(),
+                NavBarVoice(),
           ),
           Pinned.fromSize(
-            bounds: Rect.fromLTWH(48.0, 264.0, 317.w, 307.h),
+            bounds: Rect.fromLTWH(56.0, 594.0, 300.w, 67.h),
             size: Size(412.w, 870.h),
             pinLeft: true,
             pinRight: true,
             fixedHeight: true,
             child:
-                // Adobe XD layer: 'Control Arrow' (component)
-                ControlArrow(),
+                // Adobe XD layer: 'Time Slider' (component)
+                TimeSlider(),
+          ),
+          Pinned.fromSize(
+            bounds: Rect.fromLTWH(48.0, 243.0, 317.w, 307.h),
+            size: Size(412.w, 870.h),
+            pinLeft: true,
+            pinRight: true,
+            fixedHeight: true,
+            child:
+                // Adobe XD layer: 'Voice Control' (component)
+                VoiceControl(),
           ),
         ],
       ),

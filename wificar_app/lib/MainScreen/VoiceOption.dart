@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ControlOption extends StatelessWidget {
-  ControlOption({
-    Key key,
-  }) : super(key: key);
+class VoiceOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -33,24 +30,23 @@ class ControlOption extends StatelessWidget {
           pinBottom: true,
           fixedWidth: true,
           child:
-              // Adobe XD layer: 'controller' (shape)
+              // Adobe XD layer: 'Voice' (shape)
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Controller.png'),
-                fit: BoxFit.fill,
+                image: const AssetImage('assets/images/Mic.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ),
         Pinned.fromSize(
-          bounds: Rect.fromLTWH(165.0, 37.0, 148.w, 37.h),
+          bounds: Rect.fromLTWH(199.0, 37.0, 80.w, 37.h),
           size: Size(367.w, 110.h),
-          pinRight: true,
           fixedWidth: true,
           fixedHeight: true,
           child: Text(
-            'Controller',
+            'Voice',
             style: TextStyle(
               fontFamily: 'Montserrat',
               fontSize: 30.sp,

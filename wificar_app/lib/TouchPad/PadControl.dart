@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ControlArrow extends StatelessWidget {
-  ControlArrow({
-    Key key,
-  }) : super(key: key);
+class PadControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(

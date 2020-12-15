@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './NavigationBar.dart';
-import './CarStatus.dart';
-import './ControlArrow.dart';
+import './NavBarTouchPad.dart';
+import './CarStatusTouchPad.dart';
+import './PadControl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TouchControl extends StatelessWidget {
-  TouchControl({
-    Key key,
-  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +21,7 @@ class TouchControl extends StatelessWidget {
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Navigation Bar' (component)
-                NavigationBar(),
+                NavBarTouchPad(),
           ),
           Pinned.fromSize(
             bounds: Rect.fromLTWH(134.0, 145.0, 145.w, 58.h),
@@ -33,7 +30,7 @@ class TouchControl extends StatelessWidget {
             fixedHeight: true,
             child:
                 // Adobe XD layer: 'Car Status' (component)
-                CarStatus(),
+                CarStatusTouchPad(),
           ),
           Pinned.fromSize(
             bounds: Rect.fromLTWH(48.0, 282.0, 317.w, 307.h),
@@ -42,8 +39,8 @@ class TouchControl extends StatelessWidget {
             pinRight: true,
             fixedHeight: true,
             child:
-                // Adobe XD layer: 'Control Arrow' (component)
-                ControlArrow(),
+                // Adobe XD layer: 'PadControl' (component)
+                PadControl(),
           ),
         ],
       ),
