@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Accelerometer extends StatelessWidget {
   Accelerometer({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -207,7 +207,7 @@ class Accelerometer extends StatelessWidget {
                       fontSize: 20.sp,
                       color: const Color(0xff000000),
                       fontWeight: FontWeight.w700,
-                      height: 1.5.h,
+                      height: 1.2.h,
                     ),
                     textAlign: TextAlign.left,
                   ),

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TouchControl extends StatelessWidget {
   TouchControl({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -205,7 +205,7 @@ class TouchControl extends StatelessWidget {
                         fontFamily: 'Montserrat',
                         fontSize: 20.sp,
                         color: const Color(0xff000000),
-                        height: 1.5.h,
+                        height: 1.2.h,
                       ),
                       children: [
                         TextSpan(
