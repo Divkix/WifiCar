@@ -106,7 +106,7 @@ class NavBarSettings extends StatelessWidget {
               fontWeight: FontWeight.w700,
               height: 1.5.h,
             ),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
       ],

@@ -23,7 +23,7 @@ class TimeSlider extends StatelessWidget {
               fontSize: 14.sp,
               color: const Color(0xff2699fb),
             ),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
         Pinned.fromSize(
@@ -42,7 +42,7 @@ class TimeSlider extends StatelessWidget {
               fontSize: 14.sp,
               color: const Color(0xff2699fb),
             ),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
         Pinned.fromSize(

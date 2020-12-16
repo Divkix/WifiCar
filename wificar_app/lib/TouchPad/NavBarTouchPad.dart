@@ -117,7 +117,7 @@ class NavBarTouchPad extends StatelessWidget {
                 ),
               ],
             ),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
       ],

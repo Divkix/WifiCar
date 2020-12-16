@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+//import '../movements.dart';
 
 class PadControl extends StatelessWidget {
   @override
@@ -56,6 +57,11 @@ class PadControl extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
+            // TODO: Add movements!!
+            // child: GestureDetector(
+            //   onTapDown: moveForward(),
+            //   onTapUp: stop(),
+            // ),
           ),
         ),
         Pinned.fromSize(
