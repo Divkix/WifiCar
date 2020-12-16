@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './NavBarTouchPad.dart';
-import './CarStatusTouchPad.dart';
-import './PadControl.dart';
+import 'package:wificar_nodemcu/TouchPad/NavBarTouchPad.dart';
+import 'package:wificar_nodemcu/TouchPad/CarStatusTouchPad.dart';
+import 'package:wificar_nodemcu/TouchPad/PadControl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TouchControl extends StatelessWidget {

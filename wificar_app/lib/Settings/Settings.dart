@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './UpdateBtnSettings.dart';
-import './MainGrpSettings.dart';
-import './CarStatusSettings.dart';
-import './NavBarSettings.dart';
+import 'package:wificar_nodemcu/Settings/UpdateBtnSettings.dart';
+import 'package:wificar_nodemcu/Settings/MainGrpSettings.dart';
+import 'package:wificar_nodemcu/Settings/CarStatusSettings.dart';
+import 'package:wificar_nodemcu/Settings/NavBarSettings.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Settings extends StatelessWidget {

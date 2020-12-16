@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './SetupBtn.dart';
+import 'package:wificar_nodemcu/MainScreen/SetupBtn.dart';
 import 'package:wificar_nodemcu/Settings/Settings.dart';
 import 'package:adobe_xd/page_link.dart';
-import './VoiceOption.dart';
+import 'package:wificar_nodemcu/MainScreen/VoiceOption.dart';
 import 'package:wificar_nodemcu/Voice/Voice.dart';
-import './AccelerometerOption.dart';
+import 'package:wificar_nodemcu/MainScreen/AccelerometerOption.dart';
 import 'package:wificar_nodemcu/Accelerometer/Accelerometer.dart';
-import './ControllerOption.dart';
+import 'package:wificar_nodemcu/MainScreen/ControllerOption.dart';
 import 'package:wificar_nodemcu/TouchPad/TouchControl.dart';
-import './NavBarMain.dart';
+import 'package:wificar_nodemcu/MainScreen/NavBarMain.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainScreen extends StatelessWidget {

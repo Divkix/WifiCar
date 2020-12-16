@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-//import '../movements.dart';
+//import 'package:wificar_nodemcu/movements.dart';
 
 class PadControl extends StatelessWidget {
   @override

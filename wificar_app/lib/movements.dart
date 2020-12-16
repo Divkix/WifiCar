@@ -1,19 +1,19 @@
-moveForward() {
+void moveForward() {
   // Move Forward!!
 }
 
-moveBackward() {
+void moveBackward() {
   // Move Backward!!
 }
 
-moveRight() {
+void moveRight() {
   // Move Right!!
 }
 
-moveLeft() {
+void moveLeft() {
   // Move Left!!
 }
 
-stop() {
+void stop() {
   // Move Stop!!
 }

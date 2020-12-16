@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './CarStatusAccelerometer.dart';
-import './NavBarAccelerometer.dart';
-import './AccelerometerControl.dart';
+import 'package:wificar_nodemcu/Accelerometer/CarStatusAccelerometer.dart';
+import 'package:wificar_nodemcu/Accelerometer/NavBarAccelerometer.dart';
+import 'package:wificar_nodemcu/Accelerometer/AccelerometerControl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Accelerometer extends StatelessWidget {

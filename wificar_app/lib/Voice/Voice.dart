@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './CommandSpoken.dart';
-import './CarStatusVoice.dart';
-import './NavBarVoice.dart';
-import './TimeSlider.dart';
-import './VoiceControl.dart';
+import 'package:wificar_nodemcu/Voice/CommandSpoken.dart';
+import 'package:wificar_nodemcu/Voice/CarStatusVoice.dart';
+import 'package:wificar_nodemcu/Voice/NavBarVoice.dart';
+import 'package:wificar_nodemcu/Voice/TimeSlider.dart';
+import 'package:wificar_nodemcu/Voice/VoiceControl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Voice extends StatelessWidget {
