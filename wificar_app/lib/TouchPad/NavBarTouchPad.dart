@@ -1,14 +1,11 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './MainScreen.dart';
+import 'package:wificar_nodemcu/MainScreen/MainScreen.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class topnav_setupsettings extends StatelessWidget {
-  topnav_setupsettings({
-    Key key,
-  }) : super(key: key);
+class NavBarTouchPad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -96,20 +93,31 @@ class topnav_setupsettings extends StatelessWidget {
           ),
         ),
         Pinned.fromSize(
-          bounds: Rect.fromLTWH(128.0, 47.0, 157.w, 24.h),
+          bounds: Rect.fromLTWH(155.0, 42.0, 102.w, 24.h),
           size: Size(412.w, 84.h),
           fixedWidth: true,
           fixedHeight: true,
-          child: Text(
-            'Connect to Car',
-            style: TextStyle(
-              fontFamily: 'Montserrat',
-              fontSize: 20.sp,
-              color: const Color(0xff000000),
-              fontWeight: FontWeight.w700,
-              height: 1.5.h,
+          child: Text.rich(
+            TextSpan(
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 20.sp,
+                color: const Color(0xff000000),
+                height: 1.5.h,
+              ),
+              children: [
+                TextSpan(
+                  text: 'Touch',
+                ),
+                TextSpan(
+                  text: 'Pad',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ),
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
           ),
         ),
       ],
