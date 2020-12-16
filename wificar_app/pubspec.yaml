@@ -15,14 +15,20 @@ dependencies:
   cupertino_icons: ^1.0.1
   adobe_xd: ^1.0.0+1
   flutter_screenutil: ^3.2.0
+  http: ^0.12.2
+  permission_handler: ^5.0.1+1
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:
-    - assets/images/
+    - assets/images/controllers/
+    - assets/images/backward/
+    - assets/images/forward/
+    - assets/images/right/
+    - assets/images/left/

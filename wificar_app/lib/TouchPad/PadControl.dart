@@ -1,9 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-//import 'package:wificar_nodemcu/movements.dart';
+import 'package:wificar_nodemcu/movements.dart';
 
-class PadControl extends StatelessWidget {
+class PadControl extends StatefulWidget {
+  @override
+  _PadControlState createState() => _PadControlState();
+}
+
+class _PadControlState extends State<PadControl> {
+  // Define Image Types!!
+  Image imgForward;
+  Image imgLeft;
+  Image imgRight;
+  Image imgBackward;
+
+  // Forward
+  Image imgUpForward = Image.asset('assets/images/forward/arrow.png');
+  Image imgDownForward = Image.asset('assets/images/forward/arrow_p.png');
+
+  // Left
+  Image imgUpLeft = Image.asset('assets/images/left/arrow.png');
+  Image imgDownLeft = Image.asset('assets/images/left/arrow_p.png');
+
+  // Right
+  Image imgUpRight = Image.asset('assets/images/right/arrow.png');
+  Image imgDownRight = Image.asset('assets/images/right/arrow_p.png');
+
+  // Backward
+  Image imgUpBackward = Image.asset('assets/images/backward/arrow.png');
+  Image imgDownBackward = Image.asset('assets/images/backward/arrow_p.png');
+
+  @override
+  void initState() {
+    super.initState();
+    imgForward = imgUpForward;
+    imgBackward = imgUpBackward;
+    imgRight = imgUpRight;
+    imgLeft = imgUpLeft;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -15,13 +51,22 @@ class PadControl extends StatelessWidget {
           fixedWidth: true,
           fixedHeight: true,
           child:
-              // Adobe XD layer: 'left' (shape)
+              // LEFT
               Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('assets/images/left_arrow.png'),
-                fit: BoxFit.fill,
-              ),
+            child: GestureDetector(
+              child: imgLeft,
+              onTapDown: (holdDown) {
+                setState(() {
+                  imgLeft = imgDownLeft;
+                });
+                Movements().moveLeft();
+              },
+              onTapUp: (release) {
+                setState(() {
+                  imgLeft = imgUpLeft;
+                });
+                Movements().stop();
+              },
             ),
           ),
         ),
@@ -32,13 +77,22 @@ class PadControl extends StatelessWidget {
           fixedWidth: true,
           fixedHeight: true,
           child:
-              // Adobe XD layer: 'back' (shape)
+              // BACKWARD
               Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('assets/images/down_arrow.png'),
-                fit: BoxFit.fill,
-              ),
+            child: GestureDetector(
+              child: imgBackward,
+              onTapDown: (holdDown) {
+                setState(() {
+                  imgBackward = imgDownBackward;
+                });
+                Movements().moveForward();
+              },
+              onTapUp: (release) {
+                setState(() {
+                  imgBackward = imgUpBackward;
+                });
+                Movements().stop();
+              },
             ),
           ),
         ),
@@ -49,19 +103,23 @@ class PadControl extends StatelessWidget {
           fixedWidth: true,
           fixedHeight: true,
           child:
-              // Adobe XD layer: 'up' (shape)
+              // FORWARD
               Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('assets/images/up_arrow.png'),
-                fit: BoxFit.fill,
-              ),
+            child: GestureDetector(
+              child: imgForward,
+              onTapDown: (holdDown) {
+                setState(() {
+                  imgForward = imgDownForward;
+                });
+                Movements().moveForward();
+              },
+              onTapUp: (release) {
+                setState(() {
+                  imgForward = imgUpForward;
+                });
+                Movements().stop();
+              },
             ),
-            // TODO: Add movements!!
-            // child: GestureDetector(
-            //   onTapDown: moveForward(),
-            //   onTapUp: stop(),
-            // ),
           ),
         ),
         Pinned.fromSize(
@@ -71,13 +129,22 @@ class PadControl extends StatelessWidget {
           fixedWidth: true,
           fixedHeight: true,
           child:
-              // Adobe XD layer: 'right' (shape)
+              // RIGHT
               Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('assets/images/right_arrow.png'),
-                fit: BoxFit.fill,
-              ),
+            child: GestureDetector(
+              child: imgRight,
+              onTapDown: (holdDown) {
+                setState(() {
+                  imgRight = imgDownRight;
+                });
+                Movements().moveRight();
+              },
+              onTapUp: (release) {
+                setState(() {
+                  imgRight = imgUpRight;
+                });
+                Movements().stop();
+              },
             ),
           ),
         ),
@@ -87,11 +154,12 @@ class PadControl extends StatelessWidget {
           fixedWidth: true,
           fixedHeight: true,
           child:
-              // Adobe XD layer: 'controller' (shape)
+              // Controller Image
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Controller.png'),
+                image: const AssetImage(
+                    'assets/images/controllers/Controller.png'),
                 fit: BoxFit.fill,
               ),
             ),

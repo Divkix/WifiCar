@@ -34,7 +34,7 @@ class VoiceOption extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Mic.png'),
+                image: const AssetImage('assets/images/controllers/Mic.png'),
                 fit: BoxFit.cover,
               ),
             ),

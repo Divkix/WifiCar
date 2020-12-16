@@ -18,7 +18,7 @@ class AccelerometerControl extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/left_arrow.png'),
+                image: const AssetImage('assets/images/left/arrow.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -35,7 +35,7 @@ class AccelerometerControl extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/down_arrow.png'),
+                image: const AssetImage('assets/images/backward/arrow.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -52,7 +52,7 @@ class AccelerometerControl extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/up_arrow.png'),
+                image: const AssetImage('assets/images/forward/arrow.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -69,7 +69,7 @@ class AccelerometerControl extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/right_arrow.png'),
+                image: const AssetImage('assets/images/right/arrow.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -85,7 +85,8 @@ class AccelerometerControl extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Accelerometer.png'),
+                image: const AssetImage(
+                    'assets/images/controllers/Accelerometer.png'),
                 fit: BoxFit.fill,
               ),
             ),

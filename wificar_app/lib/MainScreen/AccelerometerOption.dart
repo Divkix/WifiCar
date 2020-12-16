@@ -34,7 +34,8 @@ class AccelerometerOption extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Accelerometer.png'),
+                image: const AssetImage(
+                    'assets/images/controllers/Accelerometer.png'),
                 fit: BoxFit.cover,
               ),
             ),

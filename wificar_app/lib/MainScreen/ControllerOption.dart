@@ -34,7 +34,8 @@ class ControllerOption extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage('assets/images/Controller.png'),
+                image: const AssetImage(
+                    'assets/images/controllers/Controller.png'),
                 fit: BoxFit.fill,
               ),
             ),
