@@ -24,13 +24,16 @@ ESP8266WebServer server(80);
 void setup() {
 
   // Setup OUTPUT Pins
-  pinMode(ENA, OUTPUT);  // Pin for PWM(Speed Control)
-  pinMode(ENB, OUTPUT);  // Pin for PWM(Speed Control)
+  // Pin for PWM(Speed Control)
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
+  // Normal Output Pin to L298N
   pinMode(IN_1, OUTPUT);
   pinMode(IN_2, OUTPUT);
   pinMode(IN_3, OUTPUT);
   pinMode(IN_4, OUTPUT);
-  pinMode(led, OUTPUT);  // Pin for turning on lights
+  // Pin for toogling on lights
+  pinMode(led, OUTPUT);
 
   Serial.begin(115200);
 
@@ -123,7 +126,6 @@ void ledoff() {
 
   digitalWrite(led, HIGH);
 }
-
 void loop() {
   server.handleClient();
 

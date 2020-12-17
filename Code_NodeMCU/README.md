@@ -2,6 +2,9 @@
 
 NodeMCU Boards should be added in your Arduino IDE.
 
+You can check this guide here:
+https://circuits4you.com/2018/06/21/add-nodemcu-esp8266-to-arduino-ide/
+
 ## WifiCar
 For accessing and using the car via a local network, just change SSID and Passowrd.
 Connect using the App.
@@ -10,7 +13,7 @@ Connect using the App.
 For accessing and using the car via a local network as well as from outside of your network (WAN), change SSID and Passowrd.
 
 ### Requirements:
-- NoIP Account
+- NoIP Account (for DDNS Setup)
 - Open Port on your Router
 - Internet Connection
 
