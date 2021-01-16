@@ -9,3 +9,5 @@ Download the latest App from the Releases
 Use the code from the wificar_app folder to build an App yourself!
 
 Made using Flutter and Dart!
+
+Moved to gitlab: https://gitlab.com/SkuzzyxD/WifiCar
