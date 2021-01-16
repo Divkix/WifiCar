@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Disable debug banner
-      debugShowCheckedModeBanner: false,
+      // Enable debug banner
+      debugShowCheckedModeBanner: true,
       //title: 'NodeMCU WifiCar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
