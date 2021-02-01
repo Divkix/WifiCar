@@ -12,6 +12,8 @@ Clone the code and build the App yourself!
 
 Made using Flutter and Dart!
 
+Code for NodeMCU can be found here:
+https://github.com/Divkix/WifiCar_NodeMcU.git
 
 App used for connecting to your WifiCar!
 App made using Flutter and Dart Programming Language.
