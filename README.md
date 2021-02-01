@@ -1,4 +1,4 @@
-# Wificar - NodeMCU
+# WifiCar App
 
 NodeMCU WiFi enabled smart car!
 Can be controlled from you Mobile Device!
@@ -8,8 +8,13 @@ Can be controlled from you Mobile Device!
 ## Getting Started
 Download the latest App from the Releases
  or
-Use the code from the wificar_app folder to build an App yourself!
+Clone the code and build the App yourself!
 
 Made using Flutter and Dart!
 
-Moved to gitlab: https://gitlab.com/SkuzzyxD/WifiCar
+
+App used for connecting to your WifiCar!
+App made using Flutter and Dart Programming Language.
+
+
+**NOTE:** The app is still in development!
